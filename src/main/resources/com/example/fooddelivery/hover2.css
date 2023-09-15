@@ -1,0 +1,6 @@
+.button:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: #6aa84f;
+    -fx-font-family: Ariel;
+    -fx-font-size: 16px;
+}

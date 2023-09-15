@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ResList">
+    <top>
+        <HBox prefHeight="48.0" prefWidth="516.0" style="-fx-background-color: #FFF; -fx-border-style: hidden hidden solid hidden;" BorderPane.alignment="CENTER">
+            <children>
+                <Pane prefHeight="62.0" prefWidth="166.0">
+                    <children>
+                        <ImageView fitHeight="46.0" fitWidth="153.0" layoutX="7.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/appicon.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+                <Pane prefHeight="45.0" prefWidth="289.0">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                    </children></Pane>
+                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="109.0">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                    </children>
+                </HBox>
+            <VBox prefHeight="45.0" prefWidth="162.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backHome" prefHeight="35.0" prefWidth="137.0" stylesheets="@style.css" text="Back to Home" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="7.0" left="5.0" top="7.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Calibri" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="514.0" prefWidth="133.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="514.0" prefWidth="114.0">
+               <children>
+                  <Button fx:id="seeAll" mnemonicParsing="false" onAction="#LoadRes" prefHeight="77.0" prefWidth="159.0" style="-fx-background-color: #fff;" text="All Restaurants" textFill="#ff9603">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <ChoiceBox fx:id="resChoice" prefHeight="69.0" prefWidth="133.0" stylesheets="@style.css" />
+                  <VBox prefHeight="99.0" prefWidth="133.0">
+                     <children>
+                        <TextField fx:id="searchText" prefHeight="71.0" prefWidth="133.0" />
+                        <HBox prefHeight="60.0" prefWidth="133.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="54.0" prefWidth="56.0">
+                                       <children>
+                                              <ImageView fitHeight="41.0" fitWidth="61.0" layoutX="3.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../../../images/search-icon-jpg-18.jpg" />
+                                                  </image>
+                                              </ImageView>
+                                       </children></Pane>
+                                    <Button fx:id="searchConfirm" mnemonicParsing="false" onAction="#Search" prefHeight="44.0" prefWidth="96.0" stylesheets="@style.css" text="Search">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="resFoodList" prefHeight="545.0" prefWidth="550.0" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="ResName" prefWidth="124.66669976711273" text="Restaurant Name" />
+                        <TableColumn fx:id="Rating" minWidth="5.99993896484375" prefWidth="60.66663360595703" text="Rating" />
+                        <TableColumn fx:id="PriceRange" prefWidth="71.99998474121094" text="Price&#10;Range" />
+                        <TableColumn fx:id="Categories" prefWidth="168.66665649414062" text="Categories" />
+                  <TableColumn fx:id="foodCount" minWidth="0.0" prefWidth="53.3333740234375" text="Food&#10;Count" />
+                  <TableColumn fx:id="zip" prefWidth="74.00003051757812" text="ZIP" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

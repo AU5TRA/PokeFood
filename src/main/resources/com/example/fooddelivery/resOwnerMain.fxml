@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.resOwnerMain">
+    <top>
+        <HBox prefHeight="48.0" prefWidth="516.0" style="-fx-background-color: #FFF; -fx-border-style: hidden hidden solid hidden;" BorderPane.alignment="CENTER">
+            <children>
+                <Pane prefHeight="45.0" prefWidth="289.0">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                              <ImageView fitHeight="46.0" fitWidth="156.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../../../images/appicon.jpg" />
+                                  </image>
+                              </ImageView>
+                     </children></VBox>
+                    </children></Pane>
+                <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="109.0">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" />
+                    </children>
+                </HBox>
+                <VBox prefHeight="45.0" prefWidth="162.0">
+               <children>
+                  <Pane prefHeight="35.0" prefWidth="148.0" />
+               </children></VBox>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <VBox prefHeight="514.0" prefWidth="133.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="561.0" prefWidth="133.0">
+                    <children>
+                        <VBox prefHeight="483.0" prefWidth="133.0">
+                            <children>
+                        <Pane prefHeight="162.0" prefWidth="133.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="-2.0" layoutY="-3.0" prefHeight="71.0" prefWidth="140.0" text="Details" textFill="#ffa303" underline="true">
+                                 <font>
+                                    <Font name="Arial Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="customer" alignment="CENTER" layoutX="-2.0" layoutY="32.0" prefHeight="79.0" prefWidth="140.0" text="Customers: 0" textFill="#ffa303">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="profit" alignment="CENTER" layoutX="-3.0" layoutY="80.0" prefHeight="63.0" prefWidth="140.0" text="Profit: $ 0" textFill="#ffa303">
+                                 <font>
+                                    <Font name="Arial Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="0.3333282470703125" endY="514.6666259765625" layoutX="133.0" startX="0.3333282470703125" startY="-3.814697265625E-6" />
+                           </children>
+                        </Pane>
+                            </children>
+                        </VBox>
+                  <Pane prefHeight="102.0" prefWidth="133.0" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="56.0" layoutY="70.0" mnemonicParsing="false" onAction="#logout" prefHeight="33.0" prefWidth="77.0" stylesheets="@style.css" text="LOGOUT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+            <Label fx:id="ResName" alignment="CENTER" prefHeight="45.0" prefWidth="550.0" text="Label">
+               <font>
+                  <Font name="Georgia" size="30.0" />
+               </font>
+            </Label>
+                <TableView fx:id="resFoodList" prefHeight="485.0" prefWidth="550.0" stylesheets="@style.css">
+                    <columns>
+                        <TableColumn fx:id="foodName" prefWidth="156.00005090236664" text="Food Name" />
+                        <TableColumn fx:id="Price" minWidth="5.99993896484375" prefWidth="117.33335876464844" text="Price" />
+                        <TableColumn fx:id="Category" prefWidth="135.99990844726562" text="Category" />
+                        <TableColumn fx:id="oCount" prefWidth="138.00003051757812" text="Order Count" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

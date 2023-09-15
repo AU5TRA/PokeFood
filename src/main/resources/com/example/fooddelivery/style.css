@@ -1,0 +1,83 @@
+.button{
+    -fx-background-color: linear-gradient(to bottom, #ffb203, #ff9603);
+    -fx-background-radius: 15px;
+    -fx-text-fill: #fff;
+    -fx-font-family: Ariel;
+    -fx-font-size: 14px;
+}
+.button:hover{
+    -fx-background-color: #6aa84f;
+    -fx-background-radius: 15px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-family: Ariel;
+    -fx-font-size: 14px;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right, #ffb203, #ffa303);
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+.table-view .column-header{
+    -fx-background-color: linear-gradient(to bottom, #ffb203, #ff9603);
+    -fx-border-color: linear-gradient(to right, #ffb203, #ff9603, #ffb203, #ff9603);
+    -fx-size: 40px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom , #ffb203, #ffa303);
+    -fx-background-radius: 8px 8px 0px 0px;
+}
+
+
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+   -fx-font-family: Ariel;
+   -fx-font-size: 12px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FFF9ED;
+    -fx-text-fill: #000;
+    }
+
+/* Define the style for even rows (optional) */
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #999999; /* Set the background color for selected rows */
+    -fx-text-fill: white; /* Set the text color for selected rows */
+}
+.table-row-cell: hover{
+    -fx-border-color: #ffa303;
+}
+
+.choice-box {
+    -fx-font-size: 14px;
+    -fx-background-color:  linear-gradient(to bottom , #ffb203, #ffa303);;
+}
+.choice-box: hover {
+    -fx-font-size: 14px;
+    -fx-background-color: #ffb203;
+}
+
+
+/* Style the dropdown arrow button */
+.arrow-button {
+    -fx-background-color: #ffb203;
+    -fx-text-fill: white;
+}
+
+/* Style the label */
+.label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+}
+.context-menu {
+    -fx-background-color: #ffb203; /* Set the background color */
+}
